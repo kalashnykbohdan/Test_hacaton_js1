@@ -3,23 +3,55 @@
 import './sass/styles.css';
 import './sass/styles.scss';
 
-import './js/components/1InitialHomePage.js';
-import './js/components/2searchAndPlaginationHomePage.js';
-import './js/components/3navigation.js';
-import './js/components/4filmDetailsPage.js';
-import './js/components/5libraryPage.js';
+// import './js/view/homePage.js';
+// import './js/view/myFilmLibraryPage.js';
+// import './js/view/detailsPage.js';
 
-// const Header = document.querySelector('#header');
+// import './js/components/1InitialHomePage.js';
+// import './js/components/2searchAndPlaginationHomePage.js';
+// import './js/components/3navigation.js';
+// import './js/components/4filmDetailsPage.js';
+// import './js/components/5libraryPage.js';
 
-// const markupHeader = markupHeaderFunc();
-// Header.insertAdjacentHTML("afterbegin", markupHeader);
+// import HomePage from './html/homePage.html';
+// import My_library from './html/my_library.html';
 
-// function markupHeaderFunc() {
+//=================================================
+// WORK
+//=================================================
 
-//     const markup = `
-//     <h1>Привет</h1>
-//     <h1>Привет</h1>
-//     `
-//     return markup;
-// }
-// div.insertAdjacentHTML('beforebegin', '<p>Привет</p>');
+import HomePage from './js/pages/HomePage/HomePage.js';
+import DetailsPage from './js/pages/DetailsPage/DetailsPage.js';
+import MyFilmLibraryPage from './js/pages/MyFilmLibraryPage/MyFilmLibraryPage.js';
+
+import searchAndPlaginationHome from './js/components/2searchAndPlaginationHomePage.js'; 
+
+function getCurrentPath() {
+  return location.pathname;
+}
+
+function init() {
+  const root = document.getElementById('root');
+  const path = getCurrentPath();
+  switch (path) {
+    case '/': {
+        console.log(`init`);
+        
+        HomePage(root);
+        break;
+    }
+    case '/details': {
+        DetailsPage(root);
+        break;
+    }
+    case '/myFilmLibraryPage': {
+        MyFilmLibraryPage(root);
+        break;
+    }
+    default: {
+      break;
+    }
+  }
+}
+
+init();
