@@ -14,19 +14,35 @@
 
   <body>
 
-    <header id="header">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/details">Details</a></li>
-        <li><a href="/myFilmLibraryPage">MyFilmLibraryPage</a></li>
-
-      </ul>
-
+    <header id="header" class="page-header">
+      <div class="page-container">
+        <nav class="page-header__nav header-nav">
+          <a href="/" class="header-nav__logo">
+            Filmoteka
+          </a>
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <a href="/" class="header-nav__link header-nav__link--main"
+                >Home</a>
+            </li>
+            <li class="header-nav__item">
+              <a
+                href="/library"
+                class="header-nav__link header-nav__link--library"
+                >My Library</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main id="root"></main>
+    <main id="root">
+    </main>
 
-    <footer id="footer"></footer>
+    <footer id="footer" class="page-footer">
+    </footer>
+
+
 
 
   </body>
