@@ -49,6 +49,7 @@ export default function (moveId){
     
     // console.log(genres);
     // maketView();
+    setSelectFilm(moveId);
     
     window.onload = function () {
         monitorButtonStatusText();
@@ -108,7 +109,7 @@ export default function (moveId){
         monitorButtonStatusText();
       };
 
-      setSelectFilm(moveId);
+      
 }
 //==============================================================================
 function setSelectFilm(moveId){
